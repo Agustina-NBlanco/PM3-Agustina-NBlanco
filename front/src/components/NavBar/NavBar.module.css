@@ -1,0 +1,41 @@
+/* Estilos para el contenedor del navbar */
+.nav {
+    background-color: rgb(42, 109, 86);
+    padding: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+.logo {
+    max-height: 50px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+
+}
+
+
+@media (max-width: 768px) {
+
+
+    .logo {
+        max-height: 40px;
+
+    }
+
+    .navContainer {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+}

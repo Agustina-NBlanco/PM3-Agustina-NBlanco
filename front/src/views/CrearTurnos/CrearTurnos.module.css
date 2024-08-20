@@ -1,0 +1,87 @@
+.containerAppointment {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.containerAppointment h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333;
+}
+
+
+.containerAppointment label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555555;
+}
+
+
+.containerAppointment input[type="date"],
+.containerAppointment input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+
+.containerAppointment input[type="date"]:focus,
+.containerAppointment input[type="time"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+.containerAppointment p {
+    margin-top: -15px;
+    margin-bottom: 15px;
+    color: #ff4d4d;
+    font-size: 14px;
+}
+
+.containerAppointment input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.containerAppointment input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.containerAppointment input[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 480px) {
+    .containerAppointment {
+        padding: 15px;
+    }
+
+    .containerAppointment h1 {
+        font-size: 20px;
+    }
+}

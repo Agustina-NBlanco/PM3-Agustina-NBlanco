@@ -1,0 +1,93 @@
+.containerLogin {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.containerLogin h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.containerLogin label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.containerLogin input[type="text"],
+.containerLogin input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.containerLogin input[type="text"]:focus,
+.containerLogin input[type="password"]:focus {
+    border-color: #5b9bd5;
+    box-shadow: 0 0 5px rgba(91, 155, 213, 0.5);
+    outline: none;
+}
+
+.containerLogin input[type="submit"] {
+    padding: 0.75rem;
+    background-color: #5b9bd5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.containerLogin input[type="submit"]:hover {
+    background-color: #4a89c9;
+}
+
+.containerLogin p {
+    margin-top: 0.5rem;
+    color: red;
+    font-size: 0.875rem;
+}
+
+.containerLogin input[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.containerLogin input[type="button"] {
+    padding: 0.75rem;
+    background-color: #5b9bd5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.containerLogin input[type="button"]:hover {
+    background-color: #4a89c9;
+}
+
+.containerLogin p {
+    margin-top: 0.5rem;
+    color: red;
+    font-size: 0.875rem;
+}
+
+.containerLogin input[type="button"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
