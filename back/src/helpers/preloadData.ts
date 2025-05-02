@@ -4,58 +4,51 @@ import { AppointmentStatus } from "../enums/AppointmentStatus";
 
 
 const preLoadUsers = [
-
     {
-        name: "Agustina Blanco",
-        email: "agus@gmail.com",
-        birthdate: "10/05/2002",
-        nDni: 44077795,
-        username: "agus10",
+        name: "Valentina Duarte",
+        email: "valen.duarte@example.com",
+        birthdate: "03/12/1995",
+        nDni: 39568214,
+        username: "valen03",
         password: "admin"
-
     },
-
     {
-        name: "Alejandro Cejas",
-        email: "ale@gmail.com",
-        birthdate: "22/01/2003",
-        nDni: 44145678,
-        username: "ale22",
+        name: "Tomás Ferreyra",
+        email: "tomas.ferreyra@example.com",
+        birthdate: "17/04/2001",
+        nDni: 43125789,
+        username: "tomi17",
         password: "admin"
-
     },
-
     {
-        name: "Carina Ordoñez",
-        email: "cari@gmail.com",
-        birthdate: "18/09/1978",
-        nDni: 26881716,
-        username: "cari18",
+        name: "Lorena Villalba",
+        email: "lorena.villalba@example.com",
+        birthdate: "25/08/1982",
+        nDni: 30145632,
+        username: "lore25",
         password: "admin"
-
     }
 ]
-
 const preLoadAppointments = [
 
     {
         date: "18/09/2024",
         time: "10:00",
-        userId: 1,
+        userId: 7,
         status: AppointmentStatus.ACTIVE
     },
 
     {
         date: "15/08/2024",
         time: "10:00",
-        userId: 2,
+        userId: 8,
         status: AppointmentStatus.ACTIVE
     },
 
     {
         date: "28/08/2024",
         time: "10:00",
-        userId: 3,
+        userId: 9,
         status: AppointmentStatus.ACTIVE
     },
 
