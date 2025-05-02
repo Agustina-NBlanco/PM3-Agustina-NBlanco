@@ -54,6 +54,11 @@ const preLoadAppointments = [
 
 ]
 
+const formatDate = (date: string): Date => {
+    const [day, month, year] = date.split("/").map(Number)
+    return new Date(year, month, - 1, day)
+}
+
 export const preloadUserData = async () => {
     await AppDataSource.manager.transaction(async (transactionalEntityManager) => {
         const users = await UserModel.find()
@@ -62,12 +67,15 @@ export const preloadUserData = async () => {
         if (users.length) return console.log("No se hizo la precarga de datos porque ya existen registros de usuarios");
 
         for await (const user of preLoadUsers) {
+
+            const formattedDate = formatDate(user.birthdate)
+
             const newCredential = await transactionalEntityManager.save(CredentialModel.create({
                 username: user.username,
                 password: user.password
             }))
 
-            const newUser = UserModel.create({ ...user, credentials: newCredential })
+            const newUser = UserModel.create({ ...user, birthdate: formattedDate, credentials: newCredential })
             await transactionalEntityManager.save(newUser)
         }
 
@@ -91,7 +99,9 @@ export const preloadAppointmentsData = async () => {
 
         const promises = preLoadAppointments.map(async (appointment) => {
 
-            const newAppointment = await AppointmentModel.create(appointment)
+            const formattedDate = formatDate(appointment.date)
+
+            const newAppointment = await AppointmentModel.create({ ...appointment, date: formattedDate })
             await queryRunner.manager.save(newAppointment)
 
             const user = await UserModel.findOneBy({ id: appointment.userId })
