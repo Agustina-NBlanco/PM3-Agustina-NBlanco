@@ -6,6 +6,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setUser, setUserAppointments } from "../../redux/reducer";
 import { useNavigate } from "react-router-dom";
+import baseUrl from "../../api";
 
 
 const Login = () => {
@@ -38,7 +39,7 @@ const Login = () => {
         setErrors(validationErrors)
 
         if (Object.keys(validationErrors).length === 0) {
-            axios.post("http://localhost:3000/users/login", userState)
+            axios.post(`${baseUrl}/users/login`, userState)
                 .then(res => {
                     if (res.status === 200) {
                         alert('Sesión iniciada con exito')

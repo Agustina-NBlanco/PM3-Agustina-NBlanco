@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import UnicoTurno from "../../components/UnicoTurno/UnicoTurno"
 import styles from "./MisTurnos.module.css"
 import axios from "axios"
 import { useSelector, useDispatch } from "react-redux"
 import { setUserAppointments } from "../../redux/reducer"
 import { useNavigate } from "react-router-dom"
+import baseUrl from "../../api"
 
 
 const MisTurnos = () => {
@@ -27,7 +28,7 @@ const MisTurnos = () => {
     useEffect(() => {
 
         if (user) {
-            axios.get(`http://localhost:3000/users/${user.id}`)
+            axios.get(`${baseUrl}/users/${user.id}`)
                 .then(res => {
                     console.log(res.data)
                     const { appointments } = res.data

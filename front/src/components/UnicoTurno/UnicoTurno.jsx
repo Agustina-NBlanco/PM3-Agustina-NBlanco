@@ -3,6 +3,7 @@ import styles from "./UnicoTurno.module.css"
 import { useDispatch } from "react-redux"
 import axios from "axios"
 import { cancelApointment } from "../../redux/reducer"
+import baseUrl from "../../api"
 
 
 const UnicoTurno = ({ appointment: { id, date, time, status } }) => {
@@ -18,7 +19,7 @@ const UnicoTurno = ({ appointment: { id, date, time, status } }) => {
 
         if (timeDifferenceInHours >= 24) {
 
-            axios.put(`http://localhost:3000/appointments/cancel/${id}`)
+            axios.put(`${baseUrl}/appointments/cancel/${id}`)
                 .then(res => {
                     dispatch(cancelApointment(id))
                     console.log(res);
