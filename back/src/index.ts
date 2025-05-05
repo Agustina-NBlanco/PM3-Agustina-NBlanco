@@ -13,8 +13,8 @@ const initializeApp = async () => {
             console.log("Conexión exitosa a la base de datos");
         })
 
-    await preloadUserData();
-    await preloadAppointmentsData();
+    const users = await preloadUserData();
+    await preloadAppointmentsData(users);
 
     app.listen(PORT, () => {
         console.log(`Server escuchando en el puerto: ${PORT}`);
